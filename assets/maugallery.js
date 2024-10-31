@@ -141,7 +141,7 @@
 
       $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i - 1;
+          index = i - 1; //Résolution du problème de navigation entre les images de la modal
         }
       });
       next =
@@ -177,7 +177,7 @@
 
       $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i + 1;
+          index = i + 1; //Résolution du problème de navigation entre les images de la modal
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -228,7 +228,7 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag active");
+      $(this).addClass("active-tag active"); // Résolution du problème de classe active au niveau de la barre de nav
 
       var tag = $(this).data("images-toggle");
 
